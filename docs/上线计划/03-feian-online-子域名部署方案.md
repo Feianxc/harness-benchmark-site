@@ -2,7 +2,8 @@
 
 生成时间：2026-04-24  
 推荐子域名：`harness.feian.online`  
-当前 DNS 事实：`feian.online` 使用 Cloudflare NS：`sandra.ns.cloudflare.com` / `arturo.ns.cloudflare.com`。
+当前 DNS 事实：`feian.online` 使用 Cloudflare NS：`sandra.ns.cloudflare.com` / `arturo.ns.cloudflare.com`。  
+当前子域名状态：`harness.feian.online` 尚未配置 A / AAAA / CNAME 记录；需要先确定 VPS 公网 IP 或 PaaS 分配的 hostname。
 
 ## 1. 推荐上线形态
 
@@ -22,6 +23,12 @@
 | Cloudflare Pages | 低 | 当前是 Node HTTP server，不是纯静态站；public intake 需要持久化 |
 
 ## 2. DNS 记录
+
+推荐创建子域名：
+
+```text
+harness.feian.online
+```
 
 如果使用 VPS：
 

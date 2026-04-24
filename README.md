@@ -2,6 +2,8 @@
 
 Open Harness Benchmark Protocol（OHBP）实现工作区。
 
+公开仓库：<https://github.com/Feianxc/harness-benchmark-site>
+
 当前仓库目标：
 
 1. 基于 `docs/ohbp-v0.1/ohbp-v0.1.md` 落地共享 schema / canonical / validator / verifier 真源
