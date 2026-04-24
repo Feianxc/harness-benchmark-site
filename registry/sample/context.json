@@ -1,0 +1,16 @@
+{
+  "contexts": {
+    "public": {
+      "benchmark_card": "registry/sample/benchmarks/terminal-lite-v1-public.json",
+      "task_package": "registry/sample/task-packages/terminal-lite-v1-public.json",
+      "execution_contract": "registry/sample/execution-contracts/terminal-lite-v1-default.json",
+      "benchmark_health": "registry/sample/benchmark-health/terminal-lite-v1.json"
+    },
+    "hidden": {
+      "benchmark_card": "registry/sample/benchmarks/terminal-lite-v1-hidden.json",
+      "task_package": "registry/sample/task-packages/terminal-lite-v1-hidden.json",
+      "execution_contract": "registry/sample/execution-contracts/terminal-lite-v1-default.json",
+      "benchmark_health": "registry/sample/benchmark-health/terminal-lite-v1-hidden.json"
+    }
+  }
+}

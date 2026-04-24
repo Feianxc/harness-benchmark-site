@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+.next/
+.turbo/
+*.tsbuildinfo
+.hb/
+.data/
+.workspace/
+.DS_Store
+npm-debug.log*
+apps/mock-intake/data/
+apps/web/.cache/
+.env
+.env.*
+!.env.example

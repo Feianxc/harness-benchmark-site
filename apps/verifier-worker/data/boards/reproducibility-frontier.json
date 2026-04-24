@@ -1,0 +1,123 @@
+{
+  "lang": "zh-CN",
+  "board_id": "reproducibility-frontier",
+  "title": "可复现实验前沿",
+  "subtitle": "最接近官方可信结论的候选面；强调缺口与升级路径。",
+  "presentation_mode": "queue",
+  "board_state": "insufficient_evidence",
+  "state_reason": "公开比较至少需要 2 个 eligible entries；当前只展示条目卡与证据摘要。",
+  "generated_at": "2026-04-21T09:00:00.000Z",
+  "slice": {
+    "slice_id": "slice_a25f299e5682",
+    "label": "core-lite@v1 · GPT-5.1 · 比较 harness · exec 7eeafd · tol 7dcaa7",
+    "benchmark_id": "core-lite",
+    "benchmark_version": "v1",
+    "lane_id": "core-lite-v1",
+    "comparison_mode": "fixed_model_compare_harness",
+    "repeatability_class": "true_seeded",
+    "trust_tier": "reproduced",
+    "autonomy_mode": "autonomous",
+    "budget_class": "standard",
+    "benchmark_tuned_flag": false,
+    "anchor_ref": "fixed-model:gpt-5.1",
+    "execution_contract_digest": "sha256:7eeafd96054d90acb775bee152d9645808eba35b7be7601b073c62d5a34c68c2",
+    "tolerance_policy_digest": "sha256:7dcaa7b6da6864c5e8ba26ec477a4c558d7d4e9561fe706f565effb1f2dce38c"
+  },
+  "available_slices": [
+    {
+      "slice_id": "slice_a25f299e5682",
+      "label": "core-lite@v1 · GPT-5.1 · 比较 harness · exec 7eeafd · tol 7dcaa7",
+      "state": "insufficient_evidence",
+      "entry_count": 1,
+      "filters": {
+        "benchmark_id": "core-lite",
+        "benchmark_version": "v1",
+        "lane_id": "core-lite-v1",
+        "comparison_mode": "fixed_model_compare_harness",
+        "repeatability_class": "true_seeded",
+        "trust_tier": "reproduced",
+        "autonomy_mode": "autonomous",
+        "budget_class": "standard",
+        "benchmark_tuned_flag": false,
+        "anchor_ref": "fixed-model:gpt-5.1",
+        "execution_contract_digest": "sha256:7eeafd96054d90acb775bee152d9645808eba35b7be7601b073c62d5a34c68c2",
+        "tolerance_policy_digest": "sha256:7dcaa7b6da6864c5e8ba26ec477a4c558d7d4e9561fe706f565effb1f2dce38c"
+      }
+    },
+    {
+      "slice_id": "slice_e01af1a1bd69",
+      "label": "core-lite@v1 · GPT-5.1 · 比较 harness · exec 0edca6 · tol ed311e",
+      "state": "insufficient_evidence",
+      "entry_count": 1,
+      "filters": {
+        "benchmark_id": "core-lite",
+        "benchmark_version": "v1",
+        "lane_id": "core-lite-v1",
+        "comparison_mode": "fixed_model_compare_harness",
+        "repeatability_class": "true_seeded",
+        "trust_tier": "reproduced",
+        "autonomy_mode": "autonomous",
+        "budget_class": "standard",
+        "benchmark_tuned_flag": false,
+        "anchor_ref": "fixed-model:gpt-5.1",
+        "execution_contract_digest": "sha256:0edca6a7be8d962e0b25bcf3ea6eb9c8c7d9d7e39de94a6f93a27649f3543e77",
+        "tolerance_policy_digest": "sha256:ed311e0daa0274e49ea2f9ffbda062666f84377765ca9e10a5b20f230c5d0418"
+      }
+    }
+  ],
+  "stats": {
+    "total_entries": 1,
+    "eligible_entries": 1,
+    "average_success_rate_pct": 64,
+    "last_audited_at": "2026-04-21T09:00:00.000Z"
+  },
+  "rules": [
+    "优先显示 reproduced 或 verified-pending 结果",
+    "明确列出未进入 Official Board 的阻塞原因",
+    "每次只显示单一 slice；不把不同 comparison mode 混成一张表"
+  ],
+  "entries": [
+    {
+      "entry_id": "entry_959489c04f9d",
+      "display_name": "Lantern Core × GPT-5.1",
+      "slice_label": "core-lite@v1 · GPT-5.1 · 比较 harness · exec 7eeafd · tol 7dcaa7",
+      "cluster": "接近验证",
+      "model_label": "GPT-5.1",
+      "harness_label": "Lantern Core",
+      "benchmark_label": "core-lite@v1",
+      "success_rate_pct": 64,
+      "median_cost_usd": 1.08,
+      "p95_latency_ms": 1630,
+      "stability_score": 0.81,
+      "reproducibility_score": 0.87,
+      "delta_success_vs_baseline_pct": 0,
+      "delta_latency_vs_baseline_ms": 0,
+      "n_runs": 4,
+      "n_tasks": 30,
+      "support_count": 4,
+      "trust_tier": "reproduced",
+      "publication_state": "provisional",
+      "autonomy_mode": "autonomous",
+      "evidence_channel_mode": "public_only",
+      "visibility_class": "public_full",
+      "health_warning": "health snapshot core-health-v1",
+      "digests": {
+        "public_bundle_digest": "sha256:b90462342273c560ac1d9fa48d74bfa6d7a2b5887ca5124b63312d792e9be07f"
+      },
+      "admission": {
+        "eligible": true,
+        "satisfied_reasons": [
+          "run-group 完整披露",
+          "当前 trust_tier = reproduced",
+          "autonomy_mode = autonomous"
+        ],
+        "blocked_reasons": [
+          "尚缺平台官方复跑或 Verified 最低 run 门槛"
+        ],
+        "next_actions": [
+          "尚缺平台官方复跑或 Verified 最低 run 门槛"
+        ]
+      }
+    }
+  ]
+}

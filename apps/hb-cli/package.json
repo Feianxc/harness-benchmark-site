@@ -1,0 +1,36 @@
+{
+  "name": "@ohbp/hb-cli",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "bin": {
+    "hb": "./dist/cli.js",
+    "harnessbench": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./cli": {
+      "types": "./dist/cli.d.ts",
+      "import": "./dist/cli.js",
+      "default": "./dist/cli.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "@ohbp/validator-core": "0.1.0",
+    "@ohbp/validator-rules": "0.1.0"
+  },
+  "scripts": {
+    "dev": "tsx src/cli.ts",
+    "build": "tsc -p ../../packages/validator-core/tsconfig.json && tsc -p ../../packages/validator-rules/tsconfig.json && tsc -p tsconfig.json",
+    "test": "vitest run --config vitest.config.ts"
+  }
+}

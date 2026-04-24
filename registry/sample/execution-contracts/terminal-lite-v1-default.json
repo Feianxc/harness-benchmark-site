@@ -1,0 +1,60 @@
+{
+  "schema_version": "ohbp.v0.1",
+  "object_type": "execution-contract",
+  "execution_contract_id": "terminal-lite-v1-default",
+  "benchmark_id": "terminal-lite-v1",
+  "benchmark_version": "0.1.0",
+  "runtime": {
+    "adapter_id": "sample-terminal-adapter",
+    "adapter_version": "0.1.0",
+    "launcher": "hb-cli",
+    "model_ref": "gpt-5.1-mini",
+    "container_digest": "sha256:e551039391e035bea4c8124b37797db907ad0e10f61fefd0a6e6c36ea76ff810"
+  },
+  "resource_limits": {
+    "max_steps": 32,
+    "timeout_seconds": 600,
+    "budget_usd": 5
+  },
+  "verification_policy": {
+    "required_bundle_members": [
+      "manifest.json",
+      "aggregate.json",
+      "payloads/task-results.ndjson",
+      "reports/evaluator-report.json",
+      "checksums.sha256"
+    ],
+    "tolerance_policy": {
+      "tolerance_policy_id": "terminal-lite-default-v1",
+      "tolerance_policy_version": "0.1.0",
+      "applies_to_tiers": ["reproduced", "verified"],
+      "allowed_repeatability_classes": ["true_seeded", "pseudo_repeated"],
+      "comparison_unit": "run_group",
+      "statistical_protocol": "point_estimate_with_iqr",
+      "metric_rules": [
+        {
+          "metric_id": "success_rate",
+          "level": "run_group",
+          "comparison_method": "abs_delta",
+          "threshold_abs": 0.03,
+          "threshold_rel": 0.05,
+          "directionality": "higher_is_better",
+          "hard_fail": true
+        },
+        {
+          "metric_id": "median_cost_usd",
+          "level": "run_group",
+          "comparison_method": "relative_delta",
+          "threshold_abs": 0.05,
+          "threshold_rel": 0.15,
+          "directionality": "lower_is_better",
+          "hard_fail": false
+        }
+      ],
+      "missingness_rule": "fail_on_missing_required_tasks",
+      "replay_rule": "requires_replayable_bundle",
+      "reproduce_rule": "requires_registered_complete_run_group",
+      "promotion_gate": "all_hard_fail_rules_pass"
+    }
+  }
+}

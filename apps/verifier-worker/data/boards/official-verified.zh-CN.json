@@ -1,0 +1,145 @@
+{
+  "lang": "zh-CN",
+  "board_id": "official-verified",
+  "title": "官方验证榜",
+  "subtitle": "默认公开结论层；仅展示 verified + published + board-eligible 结果。",
+  "presentation_mode": "ranking",
+  "board_state": "insufficient_evidence",
+  "state_reason": "公开比较至少需要 2 个 eligible entries；当前只展示条目卡与证据摘要。",
+  "generated_at": "2026-04-21T08:05:00.000Z",
+  "slice": {
+    "slice_id": "slice_bcb9f1c3b714",
+    "label": "terminal-lite@v1 · GPT-5.1 · 比较 harness · exec 039c34 · tol 35886d",
+    "benchmark_id": "terminal-lite",
+    "benchmark_version": "v1",
+    "lane_id": "terminal-lite-v1",
+    "comparison_mode": "fixed_model_compare_harness",
+    "repeatability_class": "true_seeded",
+    "trust_tier": "verified",
+    "autonomy_mode": "autonomous",
+    "budget_class": "standard",
+    "benchmark_tuned_flag": false,
+    "anchor_ref": "fixed-model:gpt-5.1",
+    "execution_contract_digest": "sha256:039c3426d273e5ff13e57a2300fab45c3c955c6b02173061775f8728a2d40e5d",
+    "tolerance_policy_digest": "sha256:35886dc632c56daaf021781741561a3bafaa7b2c7f18d017d2d1f8b7218d2b61"
+  },
+  "available_slices": [
+    {
+      "slice_id": "slice_bcb9f1c3b714",
+      "label": "terminal-lite@v1 · GPT-5.1 · 比较 harness · exec 039c34 · tol 35886d",
+      "state": "insufficient_evidence",
+      "entry_count": 1,
+      "filters": {
+        "benchmark_id": "terminal-lite",
+        "benchmark_version": "v1",
+        "lane_id": "terminal-lite-v1",
+        "comparison_mode": "fixed_model_compare_harness",
+        "repeatability_class": "true_seeded",
+        "trust_tier": "verified",
+        "autonomy_mode": "autonomous",
+        "budget_class": "standard",
+        "benchmark_tuned_flag": false,
+        "anchor_ref": "fixed-model:gpt-5.1",
+        "execution_contract_digest": "sha256:039c3426d273e5ff13e57a2300fab45c3c955c6b02173061775f8728a2d40e5d",
+        "tolerance_policy_digest": "sha256:35886dc632c56daaf021781741561a3bafaa7b2c7f18d017d2d1f8b7218d2b61"
+      }
+    },
+    {
+      "slice_id": "slice_79a95f67f064",
+      "label": "terminal-lite@v1 · GPT-5.1 · 比较 harness · exec 60c872 · tol 35886d",
+      "state": "insufficient_evidence",
+      "entry_count": 1,
+      "filters": {
+        "benchmark_id": "terminal-lite",
+        "benchmark_version": "v1",
+        "lane_id": "terminal-lite-v1",
+        "comparison_mode": "fixed_model_compare_harness",
+        "repeatability_class": "true_seeded",
+        "trust_tier": "verified",
+        "autonomy_mode": "autonomous",
+        "budget_class": "standard",
+        "benchmark_tuned_flag": false,
+        "anchor_ref": "fixed-model:gpt-5.1",
+        "execution_contract_digest": "sha256:60c872de3a46b5373c6d6436e1729b419d55cb9d05c88ff9a4af6e020d599d66",
+        "tolerance_policy_digest": "sha256:35886dc632c56daaf021781741561a3bafaa7b2c7f18d017d2d1f8b7218d2b61"
+      }
+    },
+    {
+      "slice_id": "slice_040998f307d0",
+      "label": "terminal-lite@v1 · GPT-5.1 · 比较 harness · exec 430c97 · tol 35886d",
+      "state": "insufficient_evidence",
+      "entry_count": 1,
+      "filters": {
+        "benchmark_id": "terminal-lite",
+        "benchmark_version": "v1",
+        "lane_id": "terminal-lite-v1",
+        "comparison_mode": "fixed_model_compare_harness",
+        "repeatability_class": "true_seeded",
+        "trust_tier": "verified",
+        "autonomy_mode": "autonomous",
+        "budget_class": "standard",
+        "benchmark_tuned_flag": false,
+        "anchor_ref": "fixed-model:gpt-5.1",
+        "execution_contract_digest": "sha256:430c972371b868ef1552b8127123ee1cec9829ca318c3fcc85772a5d1ac142c2",
+        "tolerance_policy_digest": "sha256:35886dc632c56daaf021781741561a3bafaa7b2c7f18d017d2d1f8b7218d2b61"
+      }
+    }
+  ],
+  "stats": {
+    "total_entries": 1,
+    "eligible_entries": 1,
+    "average_success_rate_pct": 71,
+    "last_audited_at": "2026-04-21T08:05:00.000Z"
+  },
+  "rules": [
+    "只收 verified + published",
+    "health / visibility / release policy 必须与 benchmark health 兼容",
+    "每次只显示单一 slice；不同 slice 通过切换器切换"
+  ],
+  "entries": [
+    {
+      "entry_id": "entry_a11b70cbf189",
+      "display_name": "Orbit Agent × GPT-5.1",
+      "slice_label": "terminal-lite@v1 · GPT-5.1 · 比较 harness · exec 039c34 · tol 35886d",
+      "cluster": "已验证",
+      "model_label": "GPT-5.1",
+      "harness_label": "Orbit Agent",
+      "benchmark_label": "terminal-lite@v1",
+      "success_rate_pct": 71,
+      "median_cost_usd": 2.4,
+      "p95_latency_ms": 2410,
+      "stability_score": 0.86,
+      "reproducibility_score": 0.91,
+      "delta_success_vs_baseline_pct": 0,
+      "delta_latency_vs_baseline_ms": 0,
+      "n_runs": 5,
+      "n_tasks": 42,
+      "support_count": 5,
+      "trust_tier": "verified",
+      "publication_state": "published",
+      "autonomy_mode": "autonomous",
+      "evidence_channel_mode": "public_plus_sealed",
+      "visibility_class": "public_summary",
+      "health_warning": "active benchmark；公开层需遵守 release/visibility gate。",
+      "digests": {
+        "public_bundle_digest": "sha256:6d62f3bb424ea1d4e3c66d68360246e65b64542167346f26788212180626a07a",
+        "sealed_audit_bundle_digest": "sha256:2a0b78e9b6b569596958c57ef78271ee14e1c924c213ab1ab1ec62f21fd49d88"
+      },
+      "admission": {
+        "eligible": true,
+        "satisfied_reasons": [
+          "completeness-proof = complete",
+          "trust_tier = verified",
+          "publication_state = published",
+          "visibility_class = public_summary",
+          "sealed digest 已显式提供",
+          "hidden/holdout/rotating split 使用 public_plus_sealed",
+          "visibility_class 与 hidden split 健康策略兼容",
+          "release_policy 与 hidden split 健康策略兼容"
+        ],
+        "blocked_reasons": [],
+        "next_actions": []
+      }
+    }
+  ]
+}

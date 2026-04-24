@@ -1,0 +1,27 @@
+{
+  "name": "ohbp-workspace",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Open Harness Benchmark Protocol implementation workspace",
+  "packageManager": "npm@11.6.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "dev:web": "npm run dev --workspace @ohbp/web",
+    "start:web": "npm run start --workspace @ohbp/web",
+    "dev:mock-intake": "npm run dev --workspace @ohbp/mock-intake",
+    "dev:cli": "npm run dev --workspace @ohbp/hb-cli",
+    "smoke": "npm run build && npm run test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.4"
+  }
+}

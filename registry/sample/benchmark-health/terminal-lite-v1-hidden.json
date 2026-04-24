@@ -1,0 +1,10 @@
+{
+  "benchmark_id": "terminal-lite-v1",
+  "benchmark_version": "0.1.0",
+  "lane_id": "terminal-lite-v1",
+  "split": "hidden",
+  "freshness_tier": "fresh",
+  "contamination_tier": "low",
+  "reporting_completeness": "complete",
+  "last_audit_at": "2026-04-20T00:00:00.000Z"
+}

@@ -1,0 +1,345 @@
+{
+  "lang": "en",
+  "entry_id": "entry_959489c04f9d",
+  "title": "Lantern Core × GPT-5.1",
+  "subtitle": "core-lite@v1 • lane core-lite-v1",
+  "summary": {
+    "trust_tier": "reproduced",
+    "publication_state": "provisional",
+    "autonomy_mode": "autonomous",
+    "evidence_channel_mode": "public_only",
+    "visibility_class": "public_full",
+    "release_policy": "public_immediate"
+  },
+  "scorecard": {
+    "verdict": "This result has reproducible-grade evidence but has not entered the default official conclusion layer.",
+    "why_it_is_eligible": [
+      "completeness-proof = complete",
+      "visibility_class = public_full",
+      "benchmark freshness = aging; the strictest public-surface gate is not triggered"
+    ],
+    "why_it_is_blocked": [
+      "trust_tier has not reached verified",
+      "publication_state has not reached published"
+    ],
+    "metrics": [
+      {
+        "label": "Success",
+        "value": "64.0%",
+        "hint": "4 runs / 30 tasks"
+      },
+      {
+        "label": "Median cost",
+        "value": "$1.08"
+      },
+      {
+        "label": "P95 latency",
+        "value": "1630 ms"
+      },
+      {
+        "label": "Stability",
+        "value": "0.81"
+      },
+      {
+        "label": "Reproducibility",
+        "value": "0.87"
+      }
+    ],
+    "baseline_panel": [
+      {
+        "label": "Baseline",
+        "value": "River Runner (59.0%)"
+      },
+      {
+        "label": "Δ success vs baseline",
+        "value": "5.0 pts"
+      },
+      {
+        "label": "Δ latency vs baseline",
+        "value": "130 ms"
+      }
+    ],
+    "badges": [
+      {
+        "label": "trust:reproduced",
+        "tone": "warning"
+      },
+      {
+        "label": "publication:provisional",
+        "tone": "warning"
+      },
+      {
+        "label": "autonomy:autonomous",
+        "tone": "neutral"
+      },
+      {
+        "label": "evidence:public_only",
+        "tone": "neutral"
+      }
+    ]
+  },
+  "research": {
+    "subject_ref": {
+      "subject_type": "attempt_bundle",
+      "study_id": "study_e19916e87aa7",
+      "run_group_id": "rungrp_8161108f39a3",
+      "attempt_id": "attempt_ef13831e3b19",
+      "bundle_id": "bundle_7f020269f1ca"
+    },
+    "bindings": [
+      {
+        "label": "study_id",
+        "value": "study_e19916e87aa7"
+      },
+      {
+        "label": "run_group_id",
+        "value": "rungrp_8161108f39a3"
+      },
+      {
+        "label": "attempt_id",
+        "value": "attempt_ef13831e3b19"
+      },
+      {
+        "label": "bundle_id",
+        "value": "bundle_7f020269f1ca"
+      },
+      {
+        "label": "comparison_mode",
+        "value": "fixed_model_compare_harness"
+      },
+      {
+        "label": "repeatability_class",
+        "value": "true_seeded"
+      },
+      {
+        "label": "requested_trust_tier",
+        "value": "verified"
+      }
+    ],
+    "digests": {
+      "public_bundle_digest": "sha256:b90462342273c560ac1d9fa48d74bfa6d7a2b5887ca5124b63312d792e9be07f",
+      "task_package_digest": "sha256:e9cc85f9647d7df9fc505b5ff639c3bb004f067b89384ad77dc7ecc02a4a8838",
+      "execution_contract_digest": "sha256:7eeafd96054d90acb775bee152d9645808eba35b7be7601b073c62d5a34c68c2",
+      "tolerance_policy_digest": "sha256:7dcaa7b6da6864c5e8ba26ec477a4c558d7d4e9561fe706f565effb1f2dce38c",
+      "registration_digest": "sha256:71eea6855e7d8be10763608365f052dd9123b48b62880ff053588c9cc34d4cf4"
+    },
+    "admission": [
+      {
+        "board_id": "official-verified",
+        "title": "Official Verified Board",
+        "eligible": false,
+        "satisfied_reasons": [
+          "completeness-proof = complete",
+          "visibility_class = public_full",
+          "benchmark freshness = aging; the strictest public-surface gate is not triggered"
+        ],
+        "blocked_reasons": [
+          "trust_tier has not reached verified",
+          "publication_state has not reached published"
+        ],
+        "next_actions": [
+          "trust_tier has not reached verified",
+          "publication_state has not reached published"
+        ]
+      },
+      {
+        "board_id": "reproducibility-frontier",
+        "title": "Reproducibility Frontier",
+        "eligible": true,
+        "satisfied_reasons": [
+          "run-group is fully disclosed",
+          "current trust_tier = reproduced",
+          "autonomy_mode = autonomous"
+        ],
+        "blocked_reasons": [
+          "Platform reruns or the minimum Verified run threshold are still missing."
+        ],
+        "next_actions": [
+          "Platform reruns or the minimum Verified run threshold are still missing."
+        ]
+      },
+      {
+        "board_id": "community-lab",
+        "title": "Community Lab",
+        "eligible": false,
+        "satisfied_reasons": [
+          "Digest / metadata may be shown publicly",
+          "Sealed raw content stays withheld"
+        ],
+        "blocked_reasons": [],
+        "next_actions": [
+          "Add registration/completeness evidence to upgrade toward reproducible_standard"
+        ]
+      }
+    ],
+    "health_panel": [
+      {
+        "label": "freshness_tier",
+        "value": "aging"
+      },
+      {
+        "label": "contamination_tier",
+        "value": "medium"
+      },
+      {
+        "label": "reporting_completeness",
+        "value": "high"
+      },
+      {
+        "label": "health_snapshot_version",
+        "value": "core-health-v1"
+      },
+      {
+        "label": "last_audit_at",
+        "value": "2026-04-18T00:00:00.000Z"
+      },
+      {
+        "label": "visibility_class",
+        "value": "public_full"
+      },
+      {
+        "label": "release_policy",
+        "value": "public_immediate"
+      },
+      {
+        "label": "evidence_channel_mode",
+        "value": "public_only"
+      }
+    ],
+    "intake_panel": [
+      {
+        "label": "intake_integrity",
+        "value": "No intake drift record is attached to this entry."
+      }
+    ],
+    "correction_log": [],
+    "redaction_notes": [
+      "This result is public_only: the public site still limits itself to protocol-safe metadata and summaries.",
+      "There is no sealed companion digest yet; if benchmark health requires sealed evidence, this entry cannot graduate to high trust.",
+      "release_policy=public_immediate, visibility_class=public_full."
+    ],
+    "history": [
+      {
+        "at": "2026-04-21T09:00:00.000Z",
+        "label": "upload_receipt",
+        "detail": "accepted / verified_full"
+      },
+      {
+        "at": "2026-04-21T09:00:00.000Z",
+        "label": "verification_record",
+        "detail": "completeness_complete, trust_reproduced, publication_provisional, autonomy_autonomous, verified_promotion_pending"
+      }
+    ],
+    "notes": [
+      "public_bundle_digest: sha256:b9046234…2e9be07f",
+      "sealed_audit_bundle_digest: N/A",
+      "The public site only shows digests and metadata; sealed raw content never enters the web surface."
+    ],
+    "raw": {
+      "completeness": {
+        "protocol_version": "0.1",
+        "proof_id": "proof_a4e7ae4d4ab1",
+        "run_group_id": "rungrp_8161108f39a3",
+        "registration_digest": "sha256:71eea6855e7d8be10763608365f052dd9123b48b62880ff053588c9cc34d4cf4",
+        "expected_attempt_total": 4,
+        "observed_attempt_total": 4,
+        "slot_coverage_rate": 1,
+        "missing_slots": [],
+        "unexpected_attempts": [],
+        "duplicate_attempts": [],
+        "replacement_attempts": [],
+        "task_coverage_summary": {
+          "declared_task_denominator": 30,
+          "scorable_task_denominator": 30,
+          "coverage_rate": 1
+        },
+        "attempt_terminal_status_histogram": {
+          "succeeded": 4
+        },
+        "completeness_verdict": "complete",
+        "tier_eligibility_effect": "blocked"
+      },
+      "verification": {
+        "protocol_version": "0.1",
+        "verification_record_id": "verify_17ef4c190e70",
+        "subject_ref": {
+          "subject_type": "attempt_bundle",
+          "study_id": "study_e19916e87aa7",
+          "run_group_id": "rungrp_8161108f39a3",
+          "attempt_id": "attempt_ef13831e3b19",
+          "bundle_id": "bundle_7f020269f1ca"
+        },
+        "subject_bundle_digest": "sha256:b90462342273c560ac1d9fa48d74bfa6d7a2b5887ca5124b63312d792e9be07f",
+        "requested_trust_tier": "verified",
+        "trust_tier": "reproduced",
+        "publication_state": "provisional",
+        "autonomy_mode": "autonomous",
+        "evidence_channel_mode": "public_only",
+        "visibility_class": "public_full",
+        "release_policy": "public_immediate",
+        "comparison_mode": "fixed_model_compare_harness",
+        "public_bundle_digest": "sha256:b90462342273c560ac1d9fa48d74bfa6d7a2b5887ca5124b63312d792e9be07f",
+        "completeness_verdict": "complete",
+        "interaction_summary_digest": "sha256:26f007994ffab9a5fc54bed4b8aaa5a848bbfb9b01d6b718d31a8860b89f5082",
+        "last_audited_at": "2026-04-21T09:00:00.000Z",
+        "decision_reason_codes": [
+          "completeness_complete",
+          "trust_reproduced",
+          "publication_provisional",
+          "autonomy_autonomous",
+          "verified_promotion_pending"
+        ],
+        "board_admission": {
+          "official_verified": {
+            "eligible": false,
+            "satisfied_reasons": [
+              "completeness-proof = complete",
+              "visibility_class = public_full",
+              "benchmark freshness = aging; the strictest public-surface gate is not triggered"
+            ],
+            "blocked_reasons": [
+              "trust_tier has not reached verified",
+              "publication_state has not reached published"
+            ],
+            "next_actions": [
+              "trust_tier has not reached verified",
+              "publication_state has not reached published"
+            ]
+          },
+          "reproducibility_frontier": {
+            "eligible": true,
+            "satisfied_reasons": [
+              "run-group is fully disclosed",
+              "current trust_tier = reproduced",
+              "autonomy_mode = autonomous"
+            ],
+            "blocked_reasons": [
+              "Platform reruns or the minimum Verified run threshold are still missing."
+            ],
+            "next_actions": [
+              "Platform reruns or the minimum Verified run threshold are still missing."
+            ]
+          },
+          "community_lab": {
+            "eligible": false,
+            "satisfied_reasons": [
+              "Digest / metadata may be shown publicly",
+              "Sealed raw content stays withheld"
+            ],
+            "blocked_reasons": [],
+            "next_actions": [
+              "Add registration/completeness evidence to upgrade toward reproducible_standard"
+            ]
+          }
+        }
+      },
+      "benchmark_health": {
+        "freshness_tier": "aging",
+        "contamination_tier": "medium",
+        "reporting_completeness": "high",
+        "last_audit_at": "2026-04-18T00:00:00.000Z",
+        "health_snapshot_version": "core-health-v1"
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": "ohbp.v0.1",
+  "object_type": "benchmark-card",
+  "benchmark": {
+    "id": "terminal-lite-v1",
+    "version": "0.1.0",
+    "lane_id": "terminal-lite-v1",
+    "split": "public",
+    "title": "Terminal Lite v1 (Public)"
+  },
+  "description": "Synthetic terminal benchmark registry card used by the schema/core MVP.",
+  "comparison_mode": "fixed_model_compare_harness",
+  "default_submission_profile": "community_light",
+  "registry_refs": {
+    "task_package": "registry/sample/task-packages/terminal-lite-v1-public.json",
+    "execution_contract": "registry/sample/execution-contracts/terminal-lite-v1-default.json"
+  }
+}

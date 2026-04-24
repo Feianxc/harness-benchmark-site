@@ -1,0 +1,32 @@
+{
+  "schema_version": "ohbp.v0.1",
+  "object_type": "task-package",
+  "task_package_id": "terminal-lite-v1-public",
+  "benchmark_id": "terminal-lite-v1",
+  "benchmark_version": "0.1.0",
+  "lane_id": "terminal-lite-v1",
+  "split": "public",
+  "tasks": [
+    {
+      "task_id": "terminal-lite-001",
+      "prompt_id": "fix-ci",
+      "title": "Repair a failing CI command",
+      "difficulty": "core",
+      "tags": ["terminal", "debugging"]
+    },
+    {
+      "task_id": "terminal-lite-002",
+      "prompt_id": "capture-log",
+      "title": "Capture and package a failing log",
+      "difficulty": "core",
+      "tags": ["terminal", "artifacts"]
+    },
+    {
+      "task_id": "terminal-lite-003",
+      "prompt_id": "summarize-run",
+      "title": "Summarize a previous run with evidence links",
+      "difficulty": "stretch",
+      "tags": ["workflow", "reporting"]
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+node_modules
+.git
+.hb
+.data
+.workspace
+.env
+.env.*
+!.env.example
+coverage
+dist
+*.tsbuildinfo
+npm-debug.log*
+apps/mock-intake/data
+apps/web/.cache

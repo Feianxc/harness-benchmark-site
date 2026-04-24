@@ -1,0 +1,345 @@
+{
+  "lang": "zh-CN",
+  "entry_id": "entry_959489c04f9d",
+  "title": "Lantern Core × GPT-5.1",
+  "subtitle": "core-lite@v1 • 赛道 core-lite-v1",
+  "summary": {
+    "trust_tier": "reproduced",
+    "publication_state": "provisional",
+    "autonomy_mode": "autonomous",
+    "evidence_channel_mode": "public_only",
+    "visibility_class": "public_full",
+    "release_policy": "public_immediate"
+  },
+  "scorecard": {
+    "verdict": "该结果已具备 reproducible 级别证据，但仍未进入官方默认结论层。",
+    "why_it_is_eligible": [
+      "completeness-proof = complete",
+      "visibility_class = public_full",
+      "benchmark freshness = aging，不触发最严格的 public surface gate"
+    ],
+    "why_it_is_blocked": [
+      "trust_tier 未达到 verified",
+      "publication_state 未进入 published"
+    ],
+    "metrics": [
+      {
+        "label": "成功率",
+        "value": "64.0%",
+        "hint": "4 次运行 / 30 个任务"
+      },
+      {
+        "label": "中位成本",
+        "value": "$1.08"
+      },
+      {
+        "label": "P95 延迟",
+        "value": "1630 ms"
+      },
+      {
+        "label": "稳定性",
+        "value": "0.81"
+      },
+      {
+        "label": "可复现性",
+        "value": "0.87"
+      }
+    ],
+    "baseline_panel": [
+      {
+        "label": "基线",
+        "value": "River Runner (59.0%)"
+      },
+      {
+        "label": "相对基线成功率差值",
+        "value": "5.0 pts"
+      },
+      {
+        "label": "相对基线延迟差值",
+        "value": "130 ms"
+      }
+    ],
+    "badges": [
+      {
+        "label": "trust:reproduced",
+        "tone": "warning"
+      },
+      {
+        "label": "publication:provisional",
+        "tone": "warning"
+      },
+      {
+        "label": "autonomy:autonomous",
+        "tone": "neutral"
+      },
+      {
+        "label": "evidence:public_only",
+        "tone": "neutral"
+      }
+    ]
+  },
+  "research": {
+    "subject_ref": {
+      "subject_type": "attempt_bundle",
+      "study_id": "study_e19916e87aa7",
+      "run_group_id": "rungrp_8161108f39a3",
+      "attempt_id": "attempt_ef13831e3b19",
+      "bundle_id": "bundle_7f020269f1ca"
+    },
+    "bindings": [
+      {
+        "label": "study_id",
+        "value": "study_e19916e87aa7"
+      },
+      {
+        "label": "run_group_id",
+        "value": "rungrp_8161108f39a3"
+      },
+      {
+        "label": "attempt_id",
+        "value": "attempt_ef13831e3b19"
+      },
+      {
+        "label": "bundle_id",
+        "value": "bundle_7f020269f1ca"
+      },
+      {
+        "label": "comparison_mode",
+        "value": "fixed_model_compare_harness"
+      },
+      {
+        "label": "repeatability_class",
+        "value": "true_seeded"
+      },
+      {
+        "label": "requested_trust_tier",
+        "value": "verified"
+      }
+    ],
+    "digests": {
+      "public_bundle_digest": "sha256:b90462342273c560ac1d9fa48d74bfa6d7a2b5887ca5124b63312d792e9be07f",
+      "task_package_digest": "sha256:e9cc85f9647d7df9fc505b5ff639c3bb004f067b89384ad77dc7ecc02a4a8838",
+      "execution_contract_digest": "sha256:7eeafd96054d90acb775bee152d9645808eba35b7be7601b073c62d5a34c68c2",
+      "tolerance_policy_digest": "sha256:7dcaa7b6da6864c5e8ba26ec477a4c558d7d4e9561fe706f565effb1f2dce38c",
+      "registration_digest": "sha256:71eea6855e7d8be10763608365f052dd9123b48b62880ff053588c9cc34d4cf4"
+    },
+    "admission": [
+      {
+        "board_id": "official-verified",
+        "title": "官方验证榜",
+        "eligible": false,
+        "satisfied_reasons": [
+          "completeness-proof = complete",
+          "visibility_class = public_full",
+          "benchmark freshness = aging，不触发最严格的 public surface gate"
+        ],
+        "blocked_reasons": [
+          "trust_tier 未达到 verified",
+          "publication_state 未进入 published"
+        ],
+        "next_actions": [
+          "trust_tier 未达到 verified",
+          "publication_state 未进入 published"
+        ]
+      },
+      {
+        "board_id": "reproducibility-frontier",
+        "title": "可复现实验前沿",
+        "eligible": true,
+        "satisfied_reasons": [
+          "run-group 完整披露",
+          "当前 trust_tier = reproduced",
+          "autonomy_mode = autonomous"
+        ],
+        "blocked_reasons": [
+          "尚缺平台官方复跑或 Verified 最低 run 门槛"
+        ],
+        "next_actions": [
+          "尚缺平台官方复跑或 Verified 最低 run 门槛"
+        ]
+      },
+      {
+        "board_id": "community-lab",
+        "title": "社区实验场",
+        "eligible": false,
+        "satisfied_reasons": [
+          "允许公开显示 digest / metadata",
+          "不暴露 sealed 原始内容"
+        ],
+        "blocked_reasons": [],
+        "next_actions": [
+          "补 registration/completeness 后可升级到 reproducible_standard"
+        ]
+      }
+    ],
+    "health_panel": [
+      {
+        "label": "freshness_tier",
+        "value": "aging"
+      },
+      {
+        "label": "contamination_tier",
+        "value": "medium"
+      },
+      {
+        "label": "reporting_completeness",
+        "value": "high"
+      },
+      {
+        "label": "health_snapshot_version",
+        "value": "core-health-v1"
+      },
+      {
+        "label": "last_audit_at",
+        "value": "2026-04-18T00:00:00.000Z"
+      },
+      {
+        "label": "visibility_class",
+        "value": "public_full"
+      },
+      {
+        "label": "release_policy",
+        "value": "public_immediate"
+      },
+      {
+        "label": "evidence_channel_mode",
+        "value": "public_only"
+      }
+    ],
+    "intake_panel": [
+      {
+        "label": "intake_integrity",
+        "value": "当前条目没有 intake drift 记录。"
+      }
+    ],
+    "correction_log": [],
+    "redaction_notes": [
+      "该结果为 public_only：公开站点仍只展示 protocol-safe 的 metadata 与摘要。",
+      "当前无 sealed companion digest；如 benchmark health 需要 sealed evidence，将无法升级到 high-trust。",
+      "release_policy=public_immediate，visibility_class=public_full。"
+    ],
+    "history": [
+      {
+        "at": "2026-04-21T09:00:00.000Z",
+        "label": "upload_receipt",
+        "detail": "accepted / verified_full"
+      },
+      {
+        "at": "2026-04-21T09:00:00.000Z",
+        "label": "verification_record",
+        "detail": "completeness_complete, trust_reproduced, publication_provisional, autonomy_autonomous, verified_promotion_pending"
+      }
+    ],
+    "notes": [
+      "public_bundle_digest: sha256:b9046234…2e9be07f",
+      "sealed_audit_bundle_digest: N/A",
+      "公开站点只显示 digest / metadata；sealed 原始内容不进入 Web surface。"
+    ],
+    "raw": {
+      "completeness": {
+        "protocol_version": "0.1",
+        "proof_id": "proof_a4e7ae4d4ab1",
+        "run_group_id": "rungrp_8161108f39a3",
+        "registration_digest": "sha256:71eea6855e7d8be10763608365f052dd9123b48b62880ff053588c9cc34d4cf4",
+        "expected_attempt_total": 4,
+        "observed_attempt_total": 4,
+        "slot_coverage_rate": 1,
+        "missing_slots": [],
+        "unexpected_attempts": [],
+        "duplicate_attempts": [],
+        "replacement_attempts": [],
+        "task_coverage_summary": {
+          "declared_task_denominator": 30,
+          "scorable_task_denominator": 30,
+          "coverage_rate": 1
+        },
+        "attempt_terminal_status_histogram": {
+          "succeeded": 4
+        },
+        "completeness_verdict": "complete",
+        "tier_eligibility_effect": "blocked"
+      },
+      "verification": {
+        "protocol_version": "0.1",
+        "verification_record_id": "verify_17ef4c190e70",
+        "subject_ref": {
+          "subject_type": "attempt_bundle",
+          "study_id": "study_e19916e87aa7",
+          "run_group_id": "rungrp_8161108f39a3",
+          "attempt_id": "attempt_ef13831e3b19",
+          "bundle_id": "bundle_7f020269f1ca"
+        },
+        "subject_bundle_digest": "sha256:b90462342273c560ac1d9fa48d74bfa6d7a2b5887ca5124b63312d792e9be07f",
+        "requested_trust_tier": "verified",
+        "trust_tier": "reproduced",
+        "publication_state": "provisional",
+        "autonomy_mode": "autonomous",
+        "evidence_channel_mode": "public_only",
+        "visibility_class": "public_full",
+        "release_policy": "public_immediate",
+        "comparison_mode": "fixed_model_compare_harness",
+        "public_bundle_digest": "sha256:b90462342273c560ac1d9fa48d74bfa6d7a2b5887ca5124b63312d792e9be07f",
+        "completeness_verdict": "complete",
+        "interaction_summary_digest": "sha256:26f007994ffab9a5fc54bed4b8aaa5a848bbfb9b01d6b718d31a8860b89f5082",
+        "last_audited_at": "2026-04-21T09:00:00.000Z",
+        "decision_reason_codes": [
+          "completeness_complete",
+          "trust_reproduced",
+          "publication_provisional",
+          "autonomy_autonomous",
+          "verified_promotion_pending"
+        ],
+        "board_admission": {
+          "official_verified": {
+            "eligible": false,
+            "satisfied_reasons": [
+              "completeness-proof = complete",
+              "visibility_class = public_full",
+              "benchmark freshness = aging，不触发最严格的 public surface gate"
+            ],
+            "blocked_reasons": [
+              "trust_tier 未达到 verified",
+              "publication_state 未进入 published"
+            ],
+            "next_actions": [
+              "trust_tier 未达到 verified",
+              "publication_state 未进入 published"
+            ]
+          },
+          "reproducibility_frontier": {
+            "eligible": true,
+            "satisfied_reasons": [
+              "run-group 完整披露",
+              "当前 trust_tier = reproduced",
+              "autonomy_mode = autonomous"
+            ],
+            "blocked_reasons": [
+              "尚缺平台官方复跑或 Verified 最低 run 门槛"
+            ],
+            "next_actions": [
+              "尚缺平台官方复跑或 Verified 最低 run 门槛"
+            ]
+          },
+          "community_lab": {
+            "eligible": false,
+            "satisfied_reasons": [
+              "允许公开显示 digest / metadata",
+              "不暴露 sealed 原始内容"
+            ],
+            "blocked_reasons": [],
+            "next_actions": [
+              "补 registration/completeness 后可升级到 reproducible_standard"
+            ]
+          }
+        }
+      },
+      "benchmark_health": {
+        "freshness_tier": "aging",
+        "contamination_tier": "medium",
+        "reporting_completeness": "high",
+        "last_audit_at": "2026-04-18T00:00:00.000Z",
+        "health_snapshot_version": "core-health-v1"
+      }
+    }
+  }
+}

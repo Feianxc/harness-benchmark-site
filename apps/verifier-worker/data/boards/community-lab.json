@@ -1,0 +1,142 @@
+{
+  "lang": "zh-CN",
+  "board_id": "community-lab",
+  "title": "社区实验场",
+  "subtitle": "低门槛实验面；默认按最近活动展示，不伪装成官方结论。",
+  "presentation_mode": "feed",
+  "board_state": "insufficient_evidence",
+  "state_reason": "公开比较至少需要 2 个 eligible entries；当前只展示条目卡与证据摘要。",
+  "generated_at": "2026-04-20T17:47:32.435Z",
+  "slice": {
+    "slice_id": "slice_05479799ba5e",
+    "label": "terminal-lite-v1@2026.04 · sample-model:sample-terminal-lite · 比较 harness · exec 10b0c0 · tol fb85c5",
+    "benchmark_id": "terminal-lite-v1",
+    "benchmark_version": "2026.04",
+    "lane_id": "terminal-lite-v1",
+    "comparison_mode": "fixed_model_compare_harness",
+    "repeatability_class": "true_seeded",
+    "trust_tier": "community",
+    "autonomy_mode": "interactive",
+    "budget_class": "premium",
+    "benchmark_tuned_flag": false,
+    "anchor_ref": "fixed-model:sample-model:sample-terminal-lite",
+    "execution_contract_digest": "sha256:10b0c0e426861c5e3f428ddf0fd12e9d3e85751fb61b8a9e21aff4a8826b9cb5",
+    "tolerance_policy_digest": "sha256:fb85c5d48424a0e1c62dd8d9db887c69d05233a62820536c36096c7f04d2516a"
+  },
+  "available_slices": [
+    {
+      "slice_id": "slice_05479799ba5e",
+      "label": "terminal-lite-v1@2026.04 · sample-model:sample-terminal-lite · 比较 harness · exec 10b0c0 · tol fb85c5",
+      "state": "insufficient_evidence",
+      "entry_count": 1,
+      "filters": {
+        "benchmark_id": "terminal-lite-v1",
+        "benchmark_version": "2026.04",
+        "lane_id": "terminal-lite-v1",
+        "comparison_mode": "fixed_model_compare_harness",
+        "repeatability_class": "true_seeded",
+        "trust_tier": "community",
+        "autonomy_mode": "interactive",
+        "budget_class": "premium",
+        "benchmark_tuned_flag": false,
+        "anchor_ref": "fixed-model:sample-model:sample-terminal-lite",
+        "execution_contract_digest": "sha256:10b0c0e426861c5e3f428ddf0fd12e9d3e85751fb61b8a9e21aff4a8826b9cb5",
+        "tolerance_policy_digest": "sha256:fb85c5d48424a0e1c62dd8d9db887c69d05233a62820536c36096c7f04d2516a"
+      }
+    },
+    {
+      "slice_id": "slice_2c166bc71183",
+      "label": "workflow-clean@v1 · system:workflow-clean · 系统组合 · exec b7603d · tol c467d8",
+      "state": "insufficient_evidence",
+      "entry_count": 1,
+      "filters": {
+        "benchmark_id": "workflow-clean",
+        "benchmark_version": "v1",
+        "lane_id": "workflow-clean-v1",
+        "comparison_mode": "system_combination",
+        "repeatability_class": "true_seeded",
+        "trust_tier": "community",
+        "autonomy_mode": "approval_only",
+        "budget_class": "budget",
+        "benchmark_tuned_flag": false,
+        "anchor_ref": "system:workflow-clean",
+        "execution_contract_digest": "sha256:b7603d03fd927d3f8a937bc2a7a2d41dea5e99d4707711957abc7a44de86c43b",
+        "tolerance_policy_digest": "sha256:c467d843d3a4c3a741be632d7fbd1419e3fdb77a021442555dfc5ca3af19cf00"
+      }
+    },
+    {
+      "slice_id": "slice_f3ca3c8e520e",
+      "label": "workflow-clean@v1 · system:workflow-clean · 系统组合 · exec 548e78 · tol c467d8",
+      "state": "insufficient_evidence",
+      "entry_count": 1,
+      "filters": {
+        "benchmark_id": "workflow-clean",
+        "benchmark_version": "v1",
+        "lane_id": "workflow-clean-v1",
+        "comparison_mode": "system_combination",
+        "repeatability_class": "true_seeded",
+        "trust_tier": "community",
+        "autonomy_mode": "interactive",
+        "budget_class": "budget",
+        "benchmark_tuned_flag": false,
+        "anchor_ref": "system:workflow-clean",
+        "execution_contract_digest": "sha256:548e78c7a998ec71c33ad42f4376bd87117b8663a3d8d38d9fddf76cea4c4226",
+        "tolerance_policy_digest": "sha256:c467d843d3a4c3a741be632d7fbd1419e3fdb77a021442555dfc5ca3af19cf00"
+      }
+    }
+  ],
+  "stats": {
+    "total_entries": 1,
+    "eligible_entries": 1,
+    "average_success_rate_pct": 100,
+    "last_audited_at": "2026-04-20T17:47:32.435Z"
+  },
+  "rules": [
+    "允许 community / provisional 公开样本",
+    "强调 submission_profile 与升级路径",
+    "默认展示 digest / metadata，而不是 sealed 原文"
+  ],
+  "entries": [
+    {
+      "entry_id": "entry_bf91fec01b81",
+      "display_name": "hb-cli × sample-model:sample-terminal-lite",
+      "slice_label": "terminal-lite-v1@2026.04 · sample-model:sample-terminal-lite · 比较 harness · exec 10b0c0 · tol fb85c5",
+      "cluster": "社区层",
+      "model_label": "sample-model:sample-terminal-lite",
+      "harness_label": "hb-cli",
+      "benchmark_label": "terminal-lite-v1@2026.04",
+      "success_rate_pct": 100,
+      "median_cost_usd": 0.06,
+      "p95_latency_ms": 992,
+      "stability_score": 0.8,
+      "reproducibility_score": 1,
+      "delta_success_vs_baseline_pct": 0,
+      "delta_latency_vs_baseline_ms": 0,
+      "n_runs": 5,
+      "n_tasks": 8,
+      "support_count": 5,
+      "trust_tier": "community",
+      "publication_state": "submitted",
+      "autonomy_mode": "interactive",
+      "evidence_channel_mode": "public_plus_sealed",
+      "visibility_class": "public_redacted",
+      "health_warning": "active benchmark；公开层需遵守 release/visibility gate。",
+      "digests": {
+        "public_bundle_digest": "sha256:a40bf4be8db35008770c8c66648ffa3d04d029f1737863222ced481f16784cbe",
+        "sealed_audit_bundle_digest": "sha256:be7d9f6840af3aa1ad0a4e764dc214e699cdcf395d5f0fab20f0080a86b613d6"
+      },
+      "admission": {
+        "eligible": true,
+        "satisfied_reasons": [
+          "允许公开显示 digest / metadata",
+          "不暴露 sealed 原始内容",
+          "当前为 community 层"
+        ],
+        "blocked_reasons": [],
+        "next_actions": [
+          "补 registration/completeness 后可升级到 reproducible_standard"
+        ]
+      }
+    }
+  ]
+}
