@@ -51,6 +51,12 @@ PUBLIC_INTAKE_ADMIN_TOKEN=replace-with-long-random-token
 
 推荐形态：`Cloudflare DNS/HTTPS -> VPS/Docker -> .data/public-submissions`。
 
+当前 Vercel public beta：
+
+- Vercel 生产地址：<https://harness-benchmark-site.vercel.app>
+- `harness.feian.online` 已加入 Vercel 项目，等待 Cloudflare 添加 `A harness -> 76.76.21.21`。
+- Vercel 版本暂不启用 public intake 持久化写入；如需正式接收外部上传，应先接入 Blob / 数据库。
+
 ```bash
 docker build -t ohbp-harnessbench .
 docker run --rm -p 3000:3000 \

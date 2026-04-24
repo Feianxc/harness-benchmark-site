@@ -220,8 +220,19 @@ function publicSubmissionAllowed(key: string): boolean {
   return true;
 }
 
-function publicSubmissionEnabled(): boolean {
-  return process.env.PUBLIC_INTAKE_ENABLED !== "false";
+export function publicSubmissionEnabled(): boolean {
+  if (process.env.PUBLIC_INTAKE_ENABLED) {
+    return process.env.PUBLIC_INTAKE_ENABLED !== "false";
+  }
+
+  // Vercel serverless functions do not provide a durable project-local disk.
+  // Keep public intake closed there unless the operator explicitly wires a
+  // storage backend or points PUBLIC_INTAKE_DATA_DIR at an intentional path.
+  if (process.env.VERCEL === "1" && !process.env.PUBLIC_INTAKE_DATA_DIR) {
+    return false;
+  }
+
+  return true;
 }
 
 function valueFromParsed(
@@ -311,8 +322,11 @@ function publicSubmissionErrorStatus(error: unknown): number {
   return 400;
 }
 
-export function createWebServer(port = Number(process.env.PORT ?? 3000)) {
-  const server = createServer(async (request, response) => {
+export async function handleWebRequest(
+  request: IncomingMessage,
+  response: ServerResponse,
+  port = Number(process.env.PORT ?? 3000),
+): Promise<void> {
     const url = new URL(request.url ?? "/", `http://${request.headers.host ?? `127.0.0.1:${port}`}`);
     const pathname = url.pathname;
     const lang = resolveUiLanguage(url.searchParams.get("lang"));
@@ -439,7 +453,7 @@ export function createWebServer(port = Number(process.env.PORT ?? 3000)) {
     }
 
     if (request.method === "GET" && pathname === "/submit") {
-      return sendHtml(response, renderSubmitPage({ lang }, context));
+      return sendHtml(response, renderSubmitPage({ lang, intakeEnabled: publicSubmissionEnabled() }, context));
     }
 
     if (request.method === "POST" && pathname === "/submit") {
@@ -456,6 +470,7 @@ export function createWebServer(port = Number(process.env.PORT ?? 3000)) {
           renderSubmitPage({
             lang,
             error: error instanceof Error ? error.message : String(error),
+            intakeEnabled: publicSubmissionEnabled(),
           }, context),
           publicSubmissionErrorStatus(error),
         );
@@ -630,6 +645,20 @@ export function createWebServer(port = Number(process.env.PORT ?? 3000)) {
     }
 
     return sendHtml(response, renderNotFound(pathname, lang, context), 404);
+}
+
+export function createWebServer(port = Number(process.env.PORT ?? 3000)) {
+  const server = createServer((request, response) => {
+    handleWebRequest(request, response, port).catch((error) => {
+      console.error(error);
+      if (!response.headersSent) {
+        sendJson(response, {
+          error: "internal_server_error",
+        }, 500);
+        return;
+      }
+      response.end();
+    });
   });
 
   return {

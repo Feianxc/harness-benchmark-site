@@ -3,7 +3,8 @@
 生成时间：2026-04-24  
 推荐子域名：`harness.feian.online`  
 当前 DNS 事实：`feian.online` 使用 Cloudflare NS：`sandra.ns.cloudflare.com` / `arturo.ns.cloudflare.com`。  
-当前子域名状态：`harness.feian.online` 尚未配置 A / AAAA / CNAME 记录；需要先确定 VPS 公网 IP 或 PaaS 分配的 hostname。
+当前 Vercel 生产地址：`https://harness-benchmark-site.vercel.app`。  
+当前子域名状态：`harness.feian.online` 已加入 Vercel 项目，但 Cloudflare 侧尚未添加解析记录。
 
 ## 1. 推荐上线形态
 
@@ -42,6 +43,14 @@ harness.feian.online
 | Type | Name | Target | Proxy |
 |---|---|---|---|
 | CNAME | `harness` | 平台给的 hostname | 通常先 DNS only，平台验证完成后再按平台要求开启 Proxied |
+
+如果使用当前 Vercel 部署，Vercel CLI 给出的推荐记录是：
+
+| Type | Name | Target | Proxy |
+|---|---|---|---|
+| A | `harness` | `76.76.21.21` | 先 DNS only |
+
+说明：先用 DNS only 完成 Vercel 域名校验；确认 `https://harness.feian.online/healthz` 正常后，再决定是否开启 Cloudflare 代理。
 
 Cloudflare 官方文档要点：
 
@@ -153,6 +162,13 @@ VPS 防火墙建议：
 ## 6. 外部上传边界
 
 当前 `/submit` 与 `/api/public-submissions` 已开放候选提交，但不会直接进榜。
+
+Vercel 部署说明：
+
+- 当前 Vercel 版本已上线页面、榜单、协议与 validator。
+- 因 Vercel Serverless 本地文件系统不适合作为长期持久化存储，当前生产环境将 public intake 写入关闭。
+- `/submit` 仍展示候选池流程，但提交按钮会显示暂停；API 返回 `public_intake_disabled`。
+- 如果后续要在 Vercel 上正式接收外部上传，需要接入 Vercel Blob / 数据库后再打开 `PUBLIC_INTAKE_ENABLED`。
 
 | 层 | 行为 |
 |---|---|

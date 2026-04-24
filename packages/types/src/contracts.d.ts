@@ -291,6 +291,15 @@ export interface BoardAdmissionDecision {
     blocked_reasons: string[];
     next_actions: string[];
 }
+export type BoardDisposition = "active" | "suspended" | "historical_only" | "hidden";
+export interface PublicationStateEvent {
+    at: string;
+    from_state?: PublicationState;
+    to_state: PublicationState;
+    actor: string;
+    reason_code: string;
+    summary: string;
+}
 export interface VerificationRecord extends BundleObject {
     verification_record_id: string;
     subject_ref: VerificationSubjectRef;
@@ -298,6 +307,9 @@ export interface VerificationRecord extends BundleObject {
     requested_trust_tier: TrustTier;
     trust_tier: TrustTier;
     publication_state: PublicationState;
+    board_disposition?: BoardDisposition;
+    state_summary?: string;
+    state_history?: PublicationStateEvent[];
     autonomy_mode: AutonomyMode;
     evidence_channel_mode: EvidenceChannelMode;
     visibility_class: VisibilityClass;

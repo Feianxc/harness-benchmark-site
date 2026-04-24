@@ -60,6 +60,7 @@ interface SubmitPageOptions {
   lang: UiLanguage;
   receipt?: PublicSubmissionReceipt;
   error?: string;
+  intakeEnabled?: boolean;
 }
 
 function validatorModeLabel(
@@ -3193,6 +3194,7 @@ export function renderSubmitPage(
   context: PageRenderContext,
 ): string {
   const { lang, receipt, error } = options;
+  const intakeEnabled = options.intakeEnabled ?? true;
   const action = withLang("/submit", lang);
   return pageShell(
     t(lang, "公开提交", "Public intake"),
@@ -3206,17 +3208,19 @@ export function renderSubmitPage(
         <div class="panel stack">
           <div class="inline">
             ${badge(t(lang, "不直接上榜", "not ranked"), "warning")}
-            ${badge(t(lang, "本地持久化", "local store"))}
+            ${intakeEnabled ? badge(t(lang, "候选池写入", "candidate store")) : badge(t(lang, "暂停写入", "intake paused"), "warning")}
           </div>
-          <p class="microcopy">${escapeHtml(t(lang, "Verified / Official 仍由 intake、verifier 与人工治理决定。", "Verified / Official stays gated by intake, verifier, and governance."))}</p>
+          <p class="microcopy">${escapeHtml(intakeEnabled ? t(lang, "Verified / Official 仍由 intake、verifier 与人工治理决定。", "Verified / Official stays gated by intake, verifier, and governance.") : t(lang, "当前部署未接入持久化存储，提交入口仅展示流程。", "This deployment has no durable storage attached; intake is shown as a flow preview."))}</p>
         </div>
       </section>
 
+      ${!intakeEnabled ? `<section class="section"><div class="notice-bar"><strong>${escapeHtml(t(lang, "提交暂停", "Intake paused"))}</strong><span class="muted">${escapeHtml(t(lang, "Vercel 版本先保留页面与校验器，正式接收需接入 Blob / 数据库。", "The Vercel build keeps the page and validator online; durable intake needs Blob or a database."))}</span></div></section>` : ""}
       ${error ? `<section class="section"><div class="notice-bar"><strong>${escapeHtml(t(lang, "提交未接收", "Not received"))}</strong><span class="muted">${escapeHtml(error)}</span></div></section>` : ""}
       ${receipt ? `<section class="section">${renderSubmissionReceipt(receipt, lang)}</section>` : ""}
 
       <section class="section stack">
         <form method="post" action="${escapeHtml(action)}" class="stack">
+          <fieldset ${intakeEnabled ? "" : "disabled"}>
           <div class="form-grid">
             <div class="stack">
               <label for="submitter-label">${escapeHtml(t(lang, "名称", "Name"))}</label>
@@ -3248,9 +3252,10 @@ export function renderSubmitPage(
             <span>${escapeHtml(t(lang, "同意保存提交记录。", "Consent to store the submission record."))}</span>
           </label>
           <div class="hero-links">
-            <button type="submit">${escapeHtml(t(lang, "提交", "Submit"))}</button>
+            <button type="submit">${escapeHtml(intakeEnabled ? t(lang, "提交", "Submit") : t(lang, "暂停", "Paused"))}</button>
             <a href="${escapeHtml(withLang("/playground/validator", lang))}">${escapeHtml(t(lang, "Validator", "Validator"))}</a>
           </div>
+          </fieldset>
         </form>
       </section>
     `,
